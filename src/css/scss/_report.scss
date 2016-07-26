@@ -1,0 +1,52 @@
+.body {
+    background-color: #243B4A;
+}
+
+.main {
+    background-color: #ECEBF3;
+}
+
+.genres {
+    background-color: #808782;
+    color: white;
+}
+
+.genre-name {
+    text-align: left;
+    width: 100%;
+}
+
+.bpm {
+    background-color: #656565;
+    color: white;
+}
+
+.bpm-cell {
+    width: 400px;
+}
+
+.sample-count-ok {
+    background-color: #77BA99;
+}
+
+.sample-count-warn {
+    background-color: #ED9B40;
+}
+
+.sample-count-crit {
+    background-color: #FF5154;
+}
+
+.sample-text {
+    text-align: center;
+}
+
+.day {
+    padding-top: 30px;
+    padding-bottom: 0;
+}
+
+.headline {
+    color: white;
+    text-align: center;
+}

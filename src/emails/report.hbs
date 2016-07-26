@@ -1,0 +1,53 @@
+---
+layout: default.hbs
+subject: weekly report for {{ report.venue }}
+---
+<span class="preheader">Weekly report for {{report.venue}}</span>
+<div class="header">
+  <table>
+    <tr>
+      <td class='headline'>
+        <h1> Weekly report for {{ report.venue }}</h1>
+      </td>
+    </tr>
+  </table>
+</div>
+<table class="main">
+  <tr>
+    <td class="wrapper">
+      <table>
+        {{#each report.days}}
+        <tr>
+          <td class='day'>
+            <h3>{{this.day}}</h3>
+          </td>
+        </tr>
+          {{#if this.parts}}
+              {{#each this.parts}}
+              <tr>
+                <td>
+                  {{>part}}
+                </td>
+              {{/each}}    
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan=2 class='no-data'>
+                 {{> notice type='warning' text='No data' }}
+              </td>
+            </tr>
+          {{/if}}
+        {{/each}}
+      </table>
+    </td>
+  </tr>
+</table>
+<div class="footer">
+  <table>
+    <tr>
+      <td class="align-center">
+        <p>listenin.io</p>
+      </td>
+    </tr>
+  </table>
+</div>
