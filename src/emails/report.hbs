@@ -7,7 +7,7 @@ subject: weekly report for {{ report.venue }}
   <table>
     <tr>
       <td class='headline'>
-        <h1> Weekly report for {{ report.venue }}</h1>
+        <h1>Weekly report for {{ report.venue }}</h1>
       </td>
     </tr>
   </table>
@@ -15,6 +15,25 @@ subject: weekly report for {{ report.venue }}
 <table class="main">
   <tr>
     <td class="wrapper">
+        <h2>Overview</h2>
+        {{>overview report}}
+    </td>
+  </tr>
+  <tr>
+    <td class="wrapper">
+        <h2>Top Tracks for {{report.venue}}</h2>
+        {{>top_tracks report.top_tracks}}
+    </td>
+  </tr>
+  <tr>
+    <td class="wrapper">
+        <h2>Top Tracks for Tel Aviv</h2>
+        {{>top_tracks report.top_tracks_tlv}}
+    </td>
+  </tr>
+  <tr>
+    <td class="wrapper">
+      <h2>Last {{#length report.days}}{{this}}{{/length}} Days</h2>
       <table>
         {{#each report.days}}
         <tr>
