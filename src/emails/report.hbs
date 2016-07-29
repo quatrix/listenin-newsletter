@@ -21,7 +21,7 @@ subject: weekly report for {{ report.venue }}
   </tr>
   <tr>
     <td class="wrapper">
-        <h2>Top Tracks for {{report.venue}}</h2>
+        <h2>Your Top Tracks</h2>
         {{>top_tracks report.top_tracks}}
     </td>
   </tr>
@@ -37,25 +37,29 @@ subject: weekly report for {{ report.venue }}
       <table>
         {{#each report.days}}
         <tr>
-          <td class='day'>
-            <h3>{{this.day}}</h3>
-          </td>
+          <td>
+            <table class='parts_report'>
+                <tr>
+                    <td class='day' style='text-align: center'> <h3>{{this.day}}</h3> </td>
+                </tr>
+                {{#if this.parts}}
+                    {{#each this.parts}}
+                    <tr>
+                        <td>
+                            {{>part}}
+                        </td>
+                    {{/each}}
+                </tr>
+                {{else}}
+                    <tr>
+                        <td colspan=2 class='no-data'>
+                            {{> notice type='warning' text='No data' }}
+                        </td>
+                    </tr>
+                {{/if}}
+            </table>
+            </td>
         </tr>
-          {{#if this.parts}}
-              {{#each this.parts}}
-              <tr>
-                <td>
-                  {{>part}}
-                </td>
-              {{/each}}    
-            </tr>
-          {{else}}
-            <tr>
-              <td colspan=2 class='no-data'>
-                 {{> notice type='warning' text='No data' }}
-              </td>
-            </tr>
-          {{/if}}
         {{/each}}
       </table>
     </td>

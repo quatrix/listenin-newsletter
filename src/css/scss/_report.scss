@@ -6,9 +6,15 @@
     background-color: #ECEBF3;
 }
 
+.parts_report {
+    margin-top: 30px;
+    border: solid thin black;
+}
+
 .genres {
-    background-color: #808782;
-    color: white;
+    padding: 2px;
+    color: black;
+    background-color: #ECEBF3;
 }
 
 .genre-name {
@@ -25,16 +31,49 @@
     width: 400px;
 }
 
+.sample-genre {
+    padding: 5px;
+
+}
+.back-sample-count-ok {
+    background-color: #6B8E23;
+    padding: 5px;
+    color: white;
+}
+
+.back-sample-count-warn {
+    background-color: #DAA520;
+    padding: 5px;
+    color: white;
+    }
+
+.back-sample-count-crit {
+    background-color: #8B0000;
+    font-weight: bold;
+    padding: 5px;
+        color: white;
+}
+
+
 .sample-count-ok {
-    background-color: #77BA99;
+    color: #6B8E23;
+    padding: 5px;
 }
 
 .sample-count-warn {
-    background-color: #ED9B40;
+    color: #DAA520;
+    padding: 5px;
 }
 
 .sample-count-crit {
-    background-color: #FF5154;
+    color: #8B0000;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.short-date {
+    width: 40px;
+    padding: 5px;
 }
 
 .sample-text {
@@ -42,7 +81,7 @@
 }
 
 .day {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 0;
 }
 

@@ -6,6 +6,14 @@ module.exports.register = function (Handlebars, options, params)  {
           return scope.fn(this);
   });
 
+  Handlebars.registerHelper("shortDate", function (longDate) {
+      return longDate.substr(0,3);
+  });
+
+  Handlebars.registerHelper("justDate", function (longDate) {
+      return longDate.substr(7);
+  });
+
   Handlebars.registerHelper('eachData', function(context, options) {
       var fn = options.fn, inverse = options.inverse, ctx;
       var ret = "";

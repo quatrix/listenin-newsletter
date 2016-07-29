@@ -3,24 +3,18 @@
     <td align="{{ align }}">
       <table cellpadding="0" cellspacing="0">
         <tr>
-          <td colspan="2">
-            {{ this.name }}
+          <td style='text-align: center' class='back-sample-count-{{this.upload_stats.status}}' colspan="2">
+            <b> {{ this.name }} - {{>sample_counter this.upload_stats}}</b>
           </td>
         </tr>
         <tr>
-          <td colspan="3">
+          <td colspan="2">
             {{>genres this.genres}}
           </td>
         </tr>
         <tr>
-          <td class='bpm-cell'>
-            {{>bpm this.bpm}}
-          </td>
-          <td class='mood-cell'>
-            {{>moods this.moods}}
-          </td>
-          <td>
-            {{>sample_counter this.upload_stats}}
+            <td style='text-align: center' colspan="2">
+              <b>Avarage BPM {{this.bpm.mean}}</b>
           </td>
         </tr>
       </table>
