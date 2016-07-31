@@ -1,26 +1,23 @@
-<table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-        <td colspan=3 style='text-align:center; font-weight:bold'>{{justDate this.days.[0].day}} - {{justDate this.days.[6].day}}</td>
-    </tr>
+<table cellpadding="0" cellspacing="0">
     <tr>
         <td colspan=2 style='text-align:center; font-weight:bold'>Top Genre</td>
-        <td style='text-align:right; font-weight:bold'>Avg BPM</td>
+        <td style='text-align:center; font-weight:bold'>Avg BPM</td>
     </tr>
-{{#each this.days}}
-<tr>
-  {{#if this.top_genre}}
-    <td style='text-align:left' class='short-date'>
-        <span class='sample-count-{{this.upload_stats.status}}'>&#x25CF;</span>
-        {{shortDate this.day }}</td>
-    <td class='sample-genre'>{{this.top_genre}}</td>
-    <td style='text-align:center' class='sample-genre'>{{this.parts.[0].bpm.mean}}</td>
-  {{else}}
-      <td class='short-date'>
-          <span class='sample-count-crit'>&#x25CF;</span>
-          {{shortDate this.day }}
-      </td>
-      <td colspan=2  class='sample-genre'>No data</td>
-  {{/if}}
-</tr>
-{{/each}}
+    {{#each this.days}}
+    <tr>
+      {{#if this.top_genre}}
+        <td style='text-align:left' class='short-date'>
+            <span class='sample-count-{{this.upload_stats.status}}'>&#x25CF;</span>
+            {{shortDate this.day }}</td>
+        <td class='sample-genre'>{{this.top_genre}}</td>
+        <td style='text-align:center' class='sample-genre'>{{this.bpm.mean}}</td>
+      {{else}}
+          <td class='short-date'>
+              <span class='sample-count-crit'>&#x25CF;</span>
+              {{shortDate this.day }}
+          </td>
+          <td colspan=2  class='sample-genre'>No Data</td>
+      {{/if}}
+    </tr>
+    {{/each}}
 </table>

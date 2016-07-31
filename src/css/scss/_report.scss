@@ -7,7 +7,7 @@
 }
 
 .parts_report {
-    margin-top: 30px;
+    margin-bottom: 30px;
     border: solid thin black;
 }
 
@@ -45,13 +45,13 @@
     background-color: #DAA520;
     padding: 5px;
     color: white;
-    }
+}
 
 .back-sample-count-crit {
     background-color: #8B0000;
     font-weight: bold;
     padding: 5px;
-        color: white;
+    color: white;
 }
 
 
@@ -87,5 +87,14 @@
 
 .headline {
     color: white;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sub-title {
+    margin-bottom: 20px;
     text-align: center;
 }

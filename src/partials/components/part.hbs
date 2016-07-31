@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td align="{{ align }}">
-      <table cellpadding="0" cellspacing="0">
+      <table cellpadding="0" cellspacing="0" frame="box" rules="none">
         <tr>
           <td style='text-align: center' class='back-sample-count-{{this.upload_stats.status}}' colspan="2">
             <b> {{ this.name }} - {{>sample_counter this.upload_stats}}</b>
@@ -13,7 +13,7 @@
           </td>
         </tr>
         <tr>
-            <td style='text-align: center' colspan="2">
+            <td class='align-center' colspan="2">
               <b>Avarage BPM {{this.bpm.mean}}</b>
           </td>
         </tr>

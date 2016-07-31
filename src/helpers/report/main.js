@@ -11,7 +11,11 @@ module.exports.register = function (Handlebars, options, params)  {
   });
 
   Handlebars.registerHelper("justDate", function (longDate) {
-      return longDate.substr(7);
+      return longDate.split(" ")[1];
+  });
+
+  Handlebars.registerHelper("longDay", function (longDate) {
+      return longDate.split(" ")[0];
   });
 
   Handlebars.registerHelper('eachData', function(context, options) {

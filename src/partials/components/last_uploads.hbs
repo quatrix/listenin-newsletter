@@ -1,0 +1,17 @@
+<table cellpadding="0" cellspacing="0">
+    {{#eachData this.days}}
+    {{#everyOther index 2}}
+    <tr style='background-color: #DCDCDC'>
+    {{else}}
+    <tr>
+    {{/everyOther}}
+      {{#if this.top_genre}}
+        <td style='text-align:left'>{{longDay this.day }}</td>
+        <td class='align-right'>{{this.last_upload}}</td>
+      {{else}}
+        <td style='text-align:left'>{{longDay this.day }}</td>
+        <td colspan=2  class='align-right'>No data</td>
+      {{/if}}
+    </tr>
+    {{/eachData}}
+</table>

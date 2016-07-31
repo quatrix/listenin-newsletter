@@ -10,30 +10,36 @@ subject: weekly report for {{ report.venue }}
         <h1>Weekly report for {{ report.venue }}</h1>
       </td>
     </tr>
+    <tr>
+      <td class='headline'>
+        <h2>{{justDate report.days.[0].day}} - {{justDate report.days.[6].day}}</h2>
+      </td>
+    </tr>
+
   </table>
 </div>
 <table class="main">
   <tr>
     <td class="wrapper">
-        <h2>Overview</h2>
+        <h2 class='sub-title'>Overview</h2>
         {{>overview report}}
     </td>
   </tr>
   <tr>
     <td class="wrapper">
-        <h2>Your Top Tracks</h2>
+        <h2 class='sub-title'>Your Top Tracks</h2>
         {{>top_tracks report.top_tracks}}
     </td>
   </tr>
   <tr>
     <td class="wrapper">
-        <h2>Top Tracks for Tel Aviv</h2>
+        <h2 class='sub-title'>Top Tracks for Tel Aviv</h2>
         {{>top_tracks report.top_tracks_tlv}}
     </td>
   </tr>
   <tr>
     <td class="wrapper">
-      <h2>Last {{#length report.days}}{{this}}{{/length}} Days</h2>
+      <h2 class='sub-title'>Last {{#length report.days}}{{this}}{{/length}} Days</h2>
       <table>
         {{#each report.days}}
         <tr>
